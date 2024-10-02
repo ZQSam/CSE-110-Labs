@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden; 
+}
+
 div {
     display: inline-block;
     width: 100%;
@@ -5,6 +14,10 @@ div {
 
 #headImg {
     display: block;
+}
+
+img {
+    max-width: 100%;
 }
 
 ul {
@@ -64,12 +77,40 @@ li a:hover {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+ 
 }
 
 #section3 .container div {
     background-color: #182b49;
     color: white;
     max-height: 500px;
+    overflow-y: scroll;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) {
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    #navbar {
+        display: none;
+    }
+
+    #headImg {
+        max-width: 75%;
+    }
+
+    #section3 .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
 }
 
 
