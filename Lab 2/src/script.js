@@ -1,3 +1,4 @@
+// excersize 1.2
 document.getElementById("userForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
