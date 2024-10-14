@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './App.css';
-import { Label, Note } from "./types"; // Import the Label type from the appropriate module
-import { dummyNotesList } from "./constants"; // Import the dummyNotesList from the appropriate module
+import { Label, Note } from "./types"; 
+import { dummyNotesList } from "./constants"; 
 import { ThemeContext, themes } from './ThemeContext';
 
 interface NoteWithFavorite extends Note {
@@ -10,6 +10,7 @@ interface NoteWithFavorite extends Note {
 
 function App() {
   // State to handle form inputs
+  // the whole react structure is used for excersie part 4
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [label, setLabel] = useState<Label>(Label.other); // Default label
