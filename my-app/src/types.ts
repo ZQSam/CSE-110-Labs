@@ -5,10 +5,12 @@ export enum Label {
     other = "other",
  }
  
- export type Note = {
-    id: number;
-    title: string;
-    content: string;
-    label: Label;
-    isFavorite: boolean;
- };
+export type Note = {
+   id: number;
+   title: string;
+   content: string;
+   label: Label;
+   isFavorite: boolean;
+};
+
+export type GroceryItem = { name: string; isPurchased: boolean };
