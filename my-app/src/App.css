@@ -64,6 +64,22 @@
  .app-container {
   grid-template-columns: 1fr;
  }
+
+ .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+  text-align: center; /* Center text within the container */
+}
+
+.App-body {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
  
  @media (min-width: 600px) {
   .app-container {
