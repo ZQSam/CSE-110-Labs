@@ -32,15 +32,27 @@ export function ToDoList() {
     }
 
     return (
-        <div className="App">
-          <h1>{name}'s To Do List</h1>
-            <div className="App-body">
-            Items bought: {numRemainingItems}
-            <form action=".">
-                {items.map((item) => ListItem(item, handleCheckboxClick))}
-            </form>
+      <div className="App">
+      <h1>{name}'s To Do List</h1>
+      <div className="App-body">
+        Items bought: {numRemainingItems}
+        <form action=".">
+          {items.map((item) => (
+            <div key={item.name}> 
+              <label>
+                <input
+                  name={item.name}
+                  type="checkbox"
+                  onChange={handleCheckboxClick}
+                  checked={item.isPurchased}
+                />
+                {item.name}
+              </label>
             </div>
-        </div>
+          ))}
+        </form>
+      </div>
+    </div>
     );
 }
 
