@@ -6,7 +6,7 @@ import Remaining from "../components/Remaining";
 import ExpenseTotal from "../components/Expense/ExpenseTotal";
 
 describe("Budget Balance Verification", () => {
-  it("should validate that Budget = Remaining Balance + Total Expenditure", () => {
+  it("validate that Budget = Remaining Balance + Total Expenditure", () => {
     const { getByText, getByLabelText } = render(
       <AppProvider>
         <AddExpenseForm />

@@ -5,7 +5,7 @@ import ExpenseList from "../components/Expense/ExpenseList";
 import Remaining from "../components/Remaining";
 
 describe("Expense Creation", () => {
-  it("add new expense and update the total spent and remaining balance", () => {
+  it("add new expense and update ", () => {
     const { getByLabelText, getByText } = render(
       <AppProvider>
         <AddExpenseForm />

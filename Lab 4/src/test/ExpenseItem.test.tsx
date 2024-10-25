@@ -5,7 +5,7 @@ import Remaining from "../components/Remaining";
 import ExpenseTotal from "../components/Expense/ExpenseTotal";
 
 describe("Expense Deletion", () => {
-  it("should delete an expense and update the total spent and remaining balance", async () => {
+  it("delete and update expense", async () => {
     // Mock initial expenses
     const initialExpenses = [
       { id: "1", name: "Groceries", cost: 200 },
