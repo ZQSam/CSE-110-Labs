@@ -19,8 +19,19 @@ const initialState: AppContextType = {
 
 export const AppContext = createContext<AppContextType>(initialState);
 
-export const AppProvider = (props: any) => {
-  const [expenses, setExpenses] = useState<Expense[]>(initialState.expenses);
+interface AppProviderProps {
+  children: React.ReactNode;
+  initialExpenses?: Expense[]; // Optional prop to pass initial expenses
+}
+
+export const AppProvider = ({
+  children,
+  initialExpenses,
+}: AppProviderProps) => {
+  // const [expenses, setExpenses] = useState<Expense[]>(initialState.expenses);
+  const [expenses, setExpenses] = useState<Expense[]>(
+    initialExpenses || initialState.expenses // Use initialExpenses if passed, else use default state
+  );
   const [budget, setBudget] = useState<number>(initialState.budget);
 
   return (
@@ -32,7 +43,7 @@ export const AppProvider = (props: any) => {
         setBudget,
       }}
     >
-      {props.children}
+      {children}
     </AppContext.Provider>
   );
 };
