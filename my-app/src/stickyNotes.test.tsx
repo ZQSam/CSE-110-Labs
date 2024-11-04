@@ -93,7 +93,7 @@ describe("StickyNotes - Delete Test", () => {
     const createButton = screen.getByText(/create note/i);
 
     fireEvent.change(titleInput, { target: { value: "Test" } });
-    fireEvent.change(contentInput, { target: { value: "Null" } });
+    fireEvent.change(contentInput, { target: { value: "Null Note" } });
     fireEvent.click(createButton);
 
     // Check that the note is present
